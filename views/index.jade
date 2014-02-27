@@ -1,0 +1,34 @@
+extends layout
+
+block variables
+	- var active = 'home'
+
+block content
+	include _header
+
+	.container
+
+		section.row(ng-controller='HomeCtrl', ng-init="setSelectedSection(sections[0])")
+			link(rel="stylesheet", ng-href="{{themePreviewUrl}}")
+			.col-lg-8.col-lg-offset-2
+
+				.row.readable
+					.col-xs-12
+						.page-header
+							h1 Zonneschans.com
+							p.lead Een van de meest effici&euml;ntste opstellingen van zonnepanelen is de zonneschans.
+					.col-xs-12
+						img.img-response(src="/img/grondmontage-systeem-solarsunroofs.jpg" width="735")
+
+				.row.readable
+					.col-xs-12
+						.page-header
+							h3 Een zonneschans is een hoog rendements opstelling voor zonnepanelen. 
+							p.lead Dit komt onder andere de volgende voordelen.
+					.col-sm-9
+						li Veel panelen op relatief klein vloeroppervlakte. 
+						li Geen schaduw plekken veroorzaakt door de panelen zelf.
+						li Hoge opbrengst door mogelijkheid optimalisatie zonnehoek.
+						li Maximaal gebruik van beschikbare opppervlakte
+					.col-sm-3
+						img.img-responsive(src="/img/schans-opstelling.jpg")
